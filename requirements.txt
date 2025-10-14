@@ -1,0 +1,8 @@
+asgiref
+Django
+gunicorn
+mysqlclient
+Pillow
+sqlparse
+tzdata
+waitress
