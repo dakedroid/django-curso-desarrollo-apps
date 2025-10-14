@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestión de Estudiantes{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+                Mi primer proyecto web en Django</a>
+            </div>
+          </nav>
+        <div class="row">
+            <div class="col-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="{% url 'index' %}">Index</a></li>
+                    <li class="list-group-item"><a href="{% url 'galeria' %}">Galeria</a></li>
+                    <li class="list-group-item"><a href="{% url 'nosotros' %}">Acerca de nosotros</a></li>
+                    <li class="list-group-item"><a href="{% url 'milista' %}">Mi lista </a></li>
+                </ul>
+                <ul>
+                    <li><a href="{% url 'lista_estudiantes' %}">Estudiantes</a></li>
+                    <li><a href="{% url 'crear_estudiante' %}">Crear Estudiante</a></li>
+                    <li><a href="{% url 'lista_carreras' %}">Carreras</a></li>
+                    <li><a href="{% url 'crear_carrera' %}">Crear Carrera</a></li>
+                </ul>                
+            </div>
+            <!-- Contenido principal -->
+            <div class="col-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
+
