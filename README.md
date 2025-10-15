@@ -34,3 +34,7 @@ python manage.py collectstatic --noinput
 # Ejecutar servidor web
 cd mi_proyecto
 waitress-serve --port=8000 mi_proyecto.wsgi:application
+
+
+# Comando para verificar direccion ip local
+ipconfig
