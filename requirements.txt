@@ -6,3 +6,4 @@ Pillow
 sqlparse
 tzdata
 waitress
+whitenoise
