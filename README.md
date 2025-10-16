@@ -1,5 +1,21 @@
+# Checar versión de Python
+Python --version
+
+# Crear entorno
+ python -m venv .venv
+
+ # Activamos el entorno virtual
+.venv\Scripts\activate
+
+# Upgrade pip 
+python -m pip install --upgrade pip
+
+
 # Instalar el cliente de MySQL
 pip uninstall mysqlclient -y; pip install --only-binary :all: mysqlclient
+
+# instalar requirements
+ pip install -r requierements.txt
 
 
 # Realizar migraciones
@@ -38,3 +54,5 @@ waitress-serve --port=8000 mi_proyecto.wsgi:application
 
 # Comando para verificar direccion ip local
 ipconfig
+
+# Desde el navegador accedemos con la direccion ip de la red local y probamos que todo funcione correctamente
